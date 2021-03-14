@@ -14,9 +14,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import qq.kitap.grammarway.ui.grammarway.GrammarFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+
+
+    private lateinit var grammarFragment: GrammarFragment
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,10 +47,10 @@ class MainActivity : AppCompatActivity() {
         nav_view.setNavigationItemSelectedListener(this)
 
 
-//        dataBaseFragment = AllFragment(10)
+//        grammarFragment = GrammarFragment()
 //        supportFragmentManager
 //            .beginTransaction()
-//            .replace(R.id.nav_host_fragment, dataBaseFragment)
+//            .replace(R.id.nav_host_fragment, grammarFragment)
 //            .commit()
     }
 
@@ -56,9 +60,8 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        return true
     }
 
 

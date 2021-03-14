@@ -10,4 +10,12 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="grammarway_1">Grammarway 1</string>
+    <string name="grammarway_2">Grammarway 2</string>
+    <string name="grammarway_3">Grammarway 3</string>
+    <string name="grammarway_4">Grammarway 4</string>
+    <string name="themes">Themes</string>
+    <string name="revision">Revision</string>
+    <string name="irregular_verbs_and_dictionaries">Irregular verbs and Dictionaries</string>
+    <string name="answers">Answers</string>
 </resources>
