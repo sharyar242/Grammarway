@@ -18,4 +18,10 @@
     <string name="revision">Revision</string>
     <string name="irregular_verbs_and_dictionaries">Irregular verbs and Dictionaries</string>
     <string name="answers">Answers</string>
+    <string name="irregular_verbs">Irregular verbs</string>
+    <string name="irregular_verbs_and_appendices">Irregular verbs and appendices</string>
+    <string name="key_to_exercises">Key to exercises</string>
+    <string name="tests">Tests</string>
+    <string name="test_answers">Test Answers</string>
+    <string name="progress_tests">Progress tests</string>
 </resources>

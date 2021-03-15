@@ -5,20 +5,20 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import qq.kitap.grammarway.ui.grammarway.GrammarFragment
+import qq.kitap.grammarway.ui.grammarway1.GrammarFragment1
+import qq.kitap.grammarway.ui.grammarway2.GrammarFragment2
+import qq.kitap.grammarway.ui.grammarway3.GrammarFragment3
+import qq.kitap.grammarway.ui.grammarway4.GrammarFragment4
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
 
-    private lateinit var grammarFragment: GrammarFragment
+    private lateinit var grammarFragment1: GrammarFragment1
 
 
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setSupportActionBar(toolbar)
         val actionBar = supportActionBar
-        actionBar?.title = "Navigation Drawer"
+        actionBar?.title = "Grammarway"
 
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
             this,
@@ -47,11 +47,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
 
-//        grammarFragment = GrammarFragment()
-//        supportFragmentManager
-//            .beginTransaction()
-//            .replace(R.id.nav_host_fragment, grammarFragment)
-//            .commit()
+        grammarFragment1 = GrammarFragment1()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.nav_host_fragment, grammarFragment1)
+            .commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -60,7 +60,38 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+        when (menuItem.itemId) {
+            R.id.nav_grammar1 ->{
+                val fragment = GrammarFragment1()
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment)
+                        .commit()
+            }
+            R.id.nav_grammar2 ->{
+                val fragment = GrammarFragment2()
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment)
+                        .commit()
+            }
+            R.id.nav_grammar3 ->{
+                val fragment = GrammarFragment3()
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment)
+                        .commit()
+            }
+            R.id.nav_grammar4 ->{
+                val fragment = GrammarFragment4()
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment)
+                        .commit()
+            }
+        }
+        drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
 

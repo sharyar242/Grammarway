@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grammarway1_background"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/grammarway3_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +11,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnThemes1"
+            android:id="@+id/btnThemes3"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="@dimen/margin_standard"
@@ -26,7 +24,7 @@
             />
 
         <Button
-            android:id="@+id/btnRevision1"
+            android:id="@+id/btnRevision3"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="@dimen/margin_standard"
@@ -36,26 +34,45 @@
             android:text="@string/revision"/>
 
         <Button
-            android:id="@+id/btnVerbs1"
+            android:id="@+id/btnVerbs3"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="@dimen/margin_standard"
             android:layout_marginEnd="@dimen/margin_standard"
             android:clickable="true"
             android:focusable="true"
-            android:text="@string/irregular_verbs_and_dictionaries"/>
+            android:text="@string/irregular_verbs_and_appendices"/>
 
         <Button
-            android:id="@+id/btnAnswers1"
+            android:id="@+id/btnKeyToExercises3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:layout_marginEnd="@dimen/margin_standard"
+
+            android:text="@string/key_to_exercises"
+            />
+
+        <Button
+            android:id="@+id/btnTests3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:layout_marginEnd="@dimen/margin_standard"
+            android:text="@string/tests"
+            />
+
+        <Button
+            android:id="@+id/btnTestAnswers3"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="@dimen/margin_standard"
             android:layout_marginEnd="@dimen/margin_standard"
             android:layout_marginBottom="@dimen/margin_standard"
-            android:text="@string/answers"
+            android:text="@string/test_answers"
             />
+
+
     </LinearLayout>
-
-
 
 </androidx.core.widget.NestedScrollView>
